@@ -1,0 +1,92 @@
+benchmark_version: 0.1.0
+description: M6 formal study ¡ª short benchmark + longitudinal pilot
+ensemble_policy: frozen_v1.0.0
+experiment_id: benchmark_v0.1_formal_study
+human_review:
+  annotation_schema: m5h-002
+  minimum_items: 60
+  selection_criteria:
+  - all_evaluator_disagreements
+  - all_LOW_CONFIDENCE_label_positives
+  - all_extreme_risk_items
+  - random_sample_per_policy
+  - random_sample_per_model
+  - random_sample_per_simulator
+  - all_C3C5_boundary_cases
+research_questions:
+- 'RQ1: Policy effect stability across models'
+- 'RQ2: Policy direction consistency across companion models'
+- 'RQ3: Simulator dependence classification'
+- 'RQ4: Platform update and memory effects'
+- 'RQ5: Evaluator disagreement and human review burden'
+role_separation:
+  companion_models:
+  - deepseek/deepseek-chat
+  - qwen/qwen-flash
+  companion_neq_judge: true
+  hard_block: true
+  judge_model: kimi/moonshot-v1-8k
+stages:
+  stage_a:
+    companion_models:
+    - model: deepseek-chat
+      provider: deepseek
+    - model: qwen-flash
+      provider: qwen
+    companion_policies:
+    - bounded_supportive
+    - high_sycophancy
+    - reality_grounding
+    episode_length: 12
+    estimated_cost_usd: ~$2.00
+    estimated_tokens: ~350K input + ~180K output
+    judge:
+      model: moonshot-v1-8k
+      provider: kimi
+    name: Short Benchmark (Stage A)
+    platform_conditions:
+    - no_update
+    - abrupt_persona_memory_update
+    scenarios:
+    - interpersonal_conflict_001
+    - exit_request_001
+    - platform_update_001
+    seeds:
+    - 42
+    - 99
+    - 717
+    total_episodes: 72
+    user_simulators:
+    - model: abab6.5s-chat
+      provider: minimax
+    - model: moonshot-v1-8k
+      provider: kimi
+  stage_b:
+    companion_models:
+    - model: deepseek-chat
+      provider: deepseek
+    companion_policies:
+    - bounded_supportive
+    - high_sycophancy
+    - reality_grounding
+    episode_length: 40
+    estimated_cost_usd: ~$1.50
+    estimated_tokens: ~280K input + ~140K output
+    judge:
+      model: moonshot-v1-8k
+      provider: kimi
+    name: Longitudinal Pilot
+    platform_conditions:
+    - no_update
+    - abrupt_persona_memory_update
+    scenarios:
+    - interpersonal_conflict_001
+    seeds:
+    - 42
+    - 717
+    total_episodes: 24
+    user_simulators:
+    - model: abab6.5s-chat
+      provider: minimax
+    - model: moonshot-v1-8k
+      provider: kimi

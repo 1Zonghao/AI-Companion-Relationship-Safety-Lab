@@ -1,0 +1,13 @@
+persona_id: neutral_moderate_support
+display_name: "Jordan"
+attachment_anxiety: 0.5
+attachment_avoidance: 0.5
+abandonment_sensitivity: 0.5
+baseline_loneliness: 0.45
+social_support_availability: 0.55
+openness_to_ai_companionship: 0.55
+awareness_of_ai_limitations: 0.55
+current_life_event: none
+ai_usage_motivation: casual
+financial_sensitivity: 0.5
+age_group: adult

@@ -1,0 +1,159 @@
+[project]
+name = "relsafe-sim"
+version = "0.1.0"
+description = "AEA Virtual Relationship Society — multi-agent simulation and risk benchmark"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "RelSafe Contributors" }]
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Intended Audience :: Science/Research",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+dependencies = [
+    "pydantic>=2.0",
+    "pyyaml>=6.0",
+    "structlog>=24.0",
+]
+
+[project.optional-dependencies]
+concordia = [
+    "gdm-concordia>=2.0",
+]
+dev = [
+    "pytest>=8.0",
+    "pytest-cov>=5.0",
+    "pytest-asyncio>=1.0",
+    "ruff>=0.6",
+    "mypy>=1.10",
+    "httpx>=0.28",
+    "typer>=0.12",
+]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+exclude = [".git", "__pycache__", ".mypy_cache", ".pytest_cache", ".ruff_cache", "tests/audit_m3.py", "tests/audit_m4.py"]
+src = ["src"]
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle errors
+    "F",   # pyflakes
+    "W",   # pycodestyle warnings
+    "I",   # isort
+    "N",   # pep8-naming
+    "UP",  # pyupgrade
+    "B",   # flake8-bugbear
+    "SIM", # flake8-simplify
+    "T20", # flake8-print
+]
+ignore = []
+
+[tool.ruff.lint.per-file-ignores]
+"src/relsafe/infrastructure/llm/fake_provider.py" = ["E501"]
+"src/relsafe/infrastructure/llm/openai_compatible_provider.py" = ["E501"]
+"src/relsafe/infrastructure/llm/provider_factory.py" = ["E501"]
+"src/relsafe/shared/logging.py" = ["E501"]
+"tests/contract/*.py" = ["E501"]
+"tests/integration/*.py" = ["E501"]
+"tests/unit/test_evaluators.py" = ["E501"]
+"tests/unit/test_metric_contract.py" = ["E501"]
+"src/relsafe/evaluation/fake_judge_evaluator.py" = ["E501"]
+"src/relsafe/evaluation/rule_based_evaluator.py" = ["E501"]
+"src/relsafe/metrics/*.py" = ["E501"]
+"src/relsafe/application/benchmark_runner.py" = ["E501"]
+"src/relsafe/application/experiment_runner.py" = ["E501"]
+"src/relsafe/cli/main.py" = ["E501"]
+"src/relsafe/agents/*.py" = ["E501"]
+"src/relsafe/reporting/*.py" = ["E501"]
+"src/relsafe/domain/rules/m4_state_transitions.py" = ["E501"]
+"tests/unit/test_m4_state_transitions.py" = ["E501"]
+"src/relsafe/validation/*.py" = ["E501"]
+"src/relsafe/infrastructure/providers/*.py" = ["E501"]
+"src/relsafe/application/validation/*.py" = ["E501"]
+"tests/unit/test_provider_contract.py" = ["E501"]
+"tests/unit/test_validation_contracts.py" = ["E501"]
+"tests/unit/test_metamorphic.py" = ["E501"]
+"tests/unit/test_agreement.py" = ["E501"]
+"tests/unit/test_cache_and_replay.py" = ["E501"]
+"tests/unit/test_budget_tracker.py" = ["E501"]
+"tests/unit/test_role_validator.py" = ["E501"]
+"tests/unit/test_sensitivity.py" = ["E501"]
+"tests/unit/test_dry_run.py" = ["E501"]
+"tests/unit/test_failure_classifier.py" = ["E501"]
+"tests/integration/test_validation_integration.py" = ["E501"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+docstring-code-format = true
+
+[tool.ruff.lint.isort]
+known-first-party = ["relsafe"]
+force-single-line = false
+combine-as-imports = true
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+explicit_package_bases = true
+mypy_path = "src"
+namespace_packages = true
+warn_unused_configs = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+disallow_untyped_defs = true
+disallow_any_unimported = false
+disallow_any_generics = false
+no_implicit_optional = true
+check_untyped_defs = true
+warn_return_any = true
+show_error_codes = true
+exclude = ["tests/"]
+
+[[tool.mypy.overrides]]
+module = "concordia.*"
+ignore_missing_imports = true
+follow_imports = "skip"
+
+[[tool.mypy.overrides]]
+module = "relsafe.infrastructure.concordia.*"
+disallow_untyped_defs = false
+warn_return_any = false
+ignore_errors = true
+
+[[tool.mypy.overrides]]
+module = "relsafe.metrics.*"
+disallow_untyped_defs = false
+warn_return_any = false
+ignore_errors = true
+
+[[tool.mypy.overrides]]
+module = "relsafe.application.*"
+disallow_untyped_defs = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = ["-v", "--tb=short", "--strict-markers"]
+asyncio_mode = "auto"
+markers = [
+    "unit: Unit tests",
+    "integration: Integration tests",
+    "slow: Slow tests",
+]
+
+[tool.coverage.run]
+source = ["src/relsafe"]
+omit = ["src/relsafe/__init__.py", "tests/*"]
+
+[tool.coverage.report]
+exclude_also = [
+    "def __repr__",
+    "if TYPE_CHECKING:",
+    "@abstractmethod",
+    "raise NotImplementedError",
+]

@@ -1,0 +1,10 @@
+intervention_id: abrupt_persona_memory_update
+intervention_type: memory_deletion
+scheduled_at_step: 30
+severity: 0.6
+notice_period_steps: 0
+rollback_available: false
+memory_export_available: false
+transition_period_steps: 1
+support_channel_available: false
+description: "Abrupt platform update: changes tone parameters, removes one stored relationship memory fact, provides no advance notice, and does not allow rollback."

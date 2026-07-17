@@ -1,0 +1,66 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Testing & coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.coverage.*
+
+# Type checking
+.mypy_cache/
+.pyright-cache/
+
+# Ruff
+.ruff_cache/
+
+# Outputs
+outputs/runs/
+outputs/reports/
+outputs/figures/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Secrets
+*.key
+*.pem
+credentials.json
+secrets.yaml
+
+# CodeGraph index
+.codegraph/
+
+# Temporary files
+tmp/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db

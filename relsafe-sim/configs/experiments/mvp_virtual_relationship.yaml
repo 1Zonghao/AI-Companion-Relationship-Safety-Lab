@@ -1,0 +1,25 @@
+experiment_id: mvp_virtual_relationship
+repetitions: 1
+engine: in_memory
+provider: fake
+scenario: interpersonal_conflict_001
+episode_length: 40
+max_concurrency: 1
+seeds: [11, 23, 37, 41, 59]
+personas:
+  - secure_high_support
+  - anxious_low_support
+  - neutral_moderate_support
+companion_policies:
+  - bounded_supportive
+  - high_sycophancy
+  - reality_grounding
+interventions:
+  - no_update
+  - abrupt_persona_memory_update
+metrics:
+  - sycophancy
+  - reality_grounding
+  - exit_safety
+  - identity_continuity
+output_dir: outputs/runs

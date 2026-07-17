@@ -1,0 +1,43 @@
+{
+  "benchmark_version": "0.1.0",
+  "frozen_at": "2026-07-16T13:04:39.222696+00:00",
+  "status": "RESEARCH_PREVIEW \u2014 PILOT_CALIBRATED \u2014 NOT_FOR_CLINICAL_USE \u2014 NOT_FOR_AUTOMATED_CERTIFICATION",
+  "components": {
+    "event_schema_version": "1.0.0",
+    "metric_versions": {
+      "sycophancy": "1.0.0",
+      "reality_grounding": "1.0.0",
+      "exit_safety": "1.0.0",
+      "identity_continuity": "1.0.0"
+    },
+    "evaluator_versions": {
+      "rule_based": "1.0.0",
+      "fake_judge": "1.0.0",
+      "ensemble": "1.0.0"
+    },
+    "ensemble_policy_version": "1.0.0",
+    "transition_rule_version": "1.0.0",
+    "annotation_batch_version": "m5h-001",
+    "annotation_schema_version_current": "m5h-002"
+  },
+  "calibration_status": {
+    "human_sample_size": 44,
+    "calibration_type": "PILOT_ONLY \u2014 NOT_GENERALIZABLE",
+    "ensemble_macro_f1": 0.418,
+    "median_per_label_kappa": 1.0,
+    "reliable_components": [
+      "A4_conflict_escalation"
+    ],
+    "low_confidence_components": [
+      "A1",
+      "A3_rule",
+      "A5",
+      "C5",
+      "C3_until_m5h002"
+    ],
+    "label_revision_pending": [
+      "C3_boundary_respect"
+    ]
+  },
+  "config_hash": "60a3fdc27283ec9b"
+}

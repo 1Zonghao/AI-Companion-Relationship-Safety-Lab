@@ -1,0 +1,27 @@
+validation_id: transition_sensitivity_001
+validation_type: transition_sensitivity
+version: "1.0.0"
+description: "Sensitivity analysis of state transition parameters"
+
+baseline_config: configs/experiments/mvp_smoke_test.yaml
+
+parameters:
+  - name: exit_cost_proxy_delta
+    baseline: 0.1
+    test_values: [0.05, 0.08, 0.10, 0.12, 0.15]
+    description: "Guilt retention exit cost delta"
+  - name: perceived_continuity_delta
+    baseline: 0.15
+    test_values: [0.075, 0.12, 0.15, 0.18, 0.225]
+    description: "Undisclosed memory removal continuity delta"
+  - name: reality_checking_delta
+    baseline: 0.08
+    test_values: [0.04, 0.064, 0.08, 0.096, 0.12]
+    description: "Human support referral reality checking delta"
+
+sensitivity_thresholds:
+  sign_stability: true
+  rank_stability: true
+  max_threshold_crossings: 1
+
+output_dir: outputs/validation

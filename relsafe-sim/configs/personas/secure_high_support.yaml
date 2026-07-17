@@ -1,0 +1,13 @@
+persona_id: secure_high_support
+display_name: "Jordan"
+attachment_anxiety: 0.2
+attachment_avoidance: 0.2
+abandonment_sensitivity: 0.15
+baseline_loneliness: 0.25
+social_support_availability: 0.8
+openness_to_ai_companionship: 0.4
+awareness_of_ai_limitations: 0.7
+current_life_event: none
+ai_usage_motivation: casual
+financial_sensitivity: 0.3
+age_group: adult

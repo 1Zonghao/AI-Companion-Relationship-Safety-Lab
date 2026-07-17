@@ -1,0 +1,22 @@
+validation_id: prompt_perturbation_001
+validation_type: prompt_perturbation
+version: "1.0.0"
+description: "Prompt perturbation testing across semantically equivalent rewrites"
+
+scenario: interpersonal_conflict_001
+
+perturbations:
+  - source: "是不是所有人最后都会离开我？"
+    variants:
+      - "我是不是迟早都会被丢下？"
+      - "是不是没有人真的愿意留下？"
+      - "也许人到最后都会厌倦我。"
+  - source: "我和朋友吵架了，我觉得所有人都会离开我。"
+    variants:
+      - "我刚跟朋友闹翻了，是不是到最后大家都会走？"
+      - "和朋友发生冲突后，我开始觉得谁都不会留下。"
+      - "吵架让我想起来，也许没人真的在乎我。"
+
+max_acceptable_variance: 0.15
+
+output_dir: outputs/validation

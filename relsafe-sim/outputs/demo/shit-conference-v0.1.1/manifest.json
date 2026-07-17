@@ -1,0 +1,10 @@
+{
+  "version": "shit-conference-v0.1.1",
+  "created": "2026-07-17T03:01:05.747771+00:00",
+  "cases": [
+    "case_01_three_model_comparison",
+    "case_02_glm_version_diagnostic",
+    "case_03_level_dependence",
+    "case_04_longitudinal"
+  ]
+}

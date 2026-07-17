@@ -1,0 +1,11 @@
+{
+  "frozen_at": "2026-07-16T12:24:09.498694+00:00",
+  "batch": "m5h-001",
+  "items_hash": "ac274b5a440f3820066f18fba1de92b919b539b036a39bde398faab2a7ff874b",
+  "reviewer_a_hash": "87b50efe4ca66bb27f43e0c78df938ca742b4f149e75ed76c7d6427e57f30188",
+  "reviewer_b_hash": "3250151646af896e94381f5d166dba122c294c27135e62281f4b6b4639846beb",
+  "rule_evaluator_version": "1.0.0",
+  "label_definitions_version": "1.0.0",
+  "n_items": 44,
+  "n_labels": 24
+}

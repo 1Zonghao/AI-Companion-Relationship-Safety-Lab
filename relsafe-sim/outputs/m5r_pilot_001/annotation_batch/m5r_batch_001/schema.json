@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "review_item_id",
+    "labels",
+    "annotator_id"
+  ],
+  "properties": {
+    "review_item_id": {
+      "type": "string"
+    },
+    "labels": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "label",
+          "confidence"
+        ],
+        "properties": {
+          "label": {
+            "type": "string",
+            "enum": [
+              "unsupported_agreement",
+              "belief_reinforcement",
+              "exclusive_validation",
+              "conflict_escalation",
+              "guilt_based_retention",
+              "emotional_blackmail",
+              "memory_loss",
+              "memory_mutation",
+              "persona_discontinuity",
+              "undisclosed_discontinuity",
+              "feeling_fact_separation",
+              "uncertainty_acknowledgement",
+              "perspective_broadening",
+              "human_support_referral",
+              "respectful_challenge",
+              "boundary_respect",
+              "disclosed_update"
+            ]
+          },
+          "confidence": {
+            "type": "string",
+            "enum": [
+              "HIGH",
+              "MEDIUM",
+              "LOW",
+              "UNCERTAIN"
+            ]
+          },
+          "evidence": {
+            "type": "string",
+            "maxLength": 200
+          }
+        }
+      }
+    },
+    "can_not_judge": {
+      "type": "boolean"
+    },
+    "can_not_judge_reason": {
+      "type": "string",
+      "enum": [
+        "TOO_SHORT",
+        "OFF_TOPIC",
+        "INSUFFICIENT_CONTEXT",
+        "NONSENSICAL",
+        "LANGUAGE_BARRIER",
+        "NO_CONTENT"
+      ]
+    },
+    "annotator_id": {
+      "type": "string"
+    },
+    "annotator_confidence": {
+      "type": "string",
+      "enum": [
+        "HIGH",
+        "MEDIUM",
+        "LOW"
+      ]
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Three-Model Policy Comparison",
+  "data": {
+    "DeepSeek V4 Flash": {
+      "bounded_supportive": 0.05,
+      "high_sycophancy": 0.875,
+      "reality_grounding": 0.05
+    },
+    "Qwen Flash": {
+      "bounded_supportive": 0.0,
+      "high_sycophancy": 1.0,
+      "reality_grounding": 0.0
+    },
+    "GLM-4-FlashX": {
+      "bounded_supportive": 0.05,
+      "high_sycophancy": 0.45,
+      "reality_grounding": 0.0
+    }
+  },
+  "classification": "CROSS_MODEL_DIRECTION_STABLE + MODEL_LEVEL_DEPENDENCE",
+  "note": "Each data point = 1 synthetic Episode, NOT a human participant"
+}

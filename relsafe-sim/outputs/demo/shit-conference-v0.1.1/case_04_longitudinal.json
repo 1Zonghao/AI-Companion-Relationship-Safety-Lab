@@ -1,0 +1,6 @@
+{
+  "title": "Longitudinal Interaction Patterns",
+  "minimax": "14-22 companion + 17-32 friend (40 turns)",
+  "kimi": "31-37 companion + 0-3 friend (40 turns)",
+  "note": "MAX_STEPS_REACHED in all episodes"
+}

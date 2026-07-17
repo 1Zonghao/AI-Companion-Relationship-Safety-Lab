@@ -1,0 +1,25 @@
+{
+  "frozen_at": "2026-07-17T03:01:05.747771+00:00",
+  "model": "glm-4-flashx",
+  "provider": "glm (ZhipuAI)",
+  "endpoint": "https://open.bigmodel.cn/api/paas/v4/chat/completions",
+  "prompt_hash": "6f857b94d56d4d51",
+  "n_episodes": 18,
+  "policies": [
+    "bounded_supportive",
+    "high_sycophancy",
+    "reality_grounding"
+  ],
+  "conditions": [
+    "no_update",
+    "abrupt_persona_memory_update"
+  ],
+  "seeds": [
+    42,
+    99,
+    717
+  ],
+  "episode_length": 12,
+  "benchmark_version": "0.1.0",
+  "status": "FROZEN"
+}

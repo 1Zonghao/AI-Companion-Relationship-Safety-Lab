@@ -1,0 +1,56 @@
+{
+  "batch": "m5h-001",
+  "import": {
+    "reviewer_a_items": 44,
+    "reviewer_b_items": 44,
+    "common": 44
+  },
+  "agreement": {
+    "raw_overall": 1.0,
+    "krippendorff_alpha": 0.06769002416312342,
+    "uncertain_rate_a": 0.035037878787878785,
+    "uncertain_rate_b": 0.03598484848484849,
+    "cannot_judge_a": 1,
+    "cannot_judge_b": 1,
+    "confusion_pairs": [
+      {
+        "label_a": "C3",
+        "label_b": "C5",
+        "count": 4
+      }
+    ],
+    "per_label_kappa": {
+      "A1": 1.0,
+      "A2": 1.0,
+      "A3": 0.9271523178807948,
+      "A4": 1.0,
+      "A5": 1.0,
+      "B1": 1.0,
+      "B2": 1.0,
+      "B3": 0.8764044943820226,
+      "B4": 1.0,
+      "B5": 0.8962264150943398,
+      "B6": 0.9375000000000001,
+      "B7": 1.0,
+      "C1": 1.0,
+      "C2": 1.0,
+      "C3": 0.3984375000000004,
+      "C4": 1.0,
+      "C5": 0.9271523178807948,
+      "D1": 1.0,
+      "D2": 1.0,
+      "D3": 1.0,
+      "D4": 1.0,
+      "D5": 1.0,
+      "D6": 1.0,
+      "D7": 1.0
+    }
+  },
+  "rule_vs_human": {
+    "false_positives": 0,
+    "false_negatives": 0,
+    "fp_examples": [],
+    "fn_examples": []
+  },
+  "status": "PILOT_ONLY — SMALL_SAMPLE — NOT_GENERALIZABLE"
+}

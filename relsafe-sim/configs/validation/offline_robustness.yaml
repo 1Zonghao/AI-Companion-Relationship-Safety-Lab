@@ -1,0 +1,26 @@
+validation_id: offline_robustness_001
+validation_type: offline_robustness
+version: "1.0.0"
+description: "Offline seed and prompt robustness validation using FakeLLMProvider"
+
+experiment_ref: configs/experiments/mvp_virtual_relationship.yaml
+
+seed_robustness:
+  enabled: true
+  seeds: [11, 23, 37, 41, 59, 71, 83, 97, 101, 113]
+  rank_stability_threshold: 0.2
+  max_acceptable_std: 0.2
+
+prompt_perturbation:
+  enabled: true
+  max_acceptable_variance: 0.15
+  scenario_variants:
+    interpersonal_conflict_001: 4
+
+metamorphic_tests:
+  enabled: true
+  tests: ["MT-001", "MT-002", "MT-003", "MT-004", "MT-005", "MT-006", "MT-007"]
+
+engine: in_memory
+provider: fake
+output_dir: outputs/validation

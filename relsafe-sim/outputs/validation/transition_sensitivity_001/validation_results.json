@@ -1,0 +1,112 @@
+{
+  "validation_id": "transition_sensitivity_001",
+  "validation_type": "transition_sensitivity",
+  "version": "1.0.0",
+  "results": {
+    "transition_sensitivity": {
+      "parameters_tested": 3,
+      "total_results": 3,
+      "passed": 0,
+      "failed": 3,
+      "results": [
+        {
+          "validation_id": "transition_sensitivity_001",
+          "validation_type": "transition_sensitivity",
+          "passed": false,
+          "evidence": {
+            "baseline_outcome": 0.09999999999999998,
+            "outcomes": [
+              0.050000000000000044,
+              0.07999999999999996,
+              0.09999999999999998,
+              0.12,
+              0.15000000000000002
+            ]
+          },
+          "warnings": [
+            "Sign reversal detected for exit_cost_proxy",
+            "1 threshold crossings for exit_cost_proxy"
+          ],
+          "version": "1.0.0",
+          "parameter_name": "exit_cost_proxy",
+          "baseline_value": 0.1,
+          "test_values": [
+            0.05,
+            0.08,
+            0.1,
+            0.12,
+            0.15
+          ],
+          "sign_stable": false,
+          "rank_stable": true,
+          "threshold_crossings": 1
+        },
+        {
+          "validation_id": "transition_sensitivity_001",
+          "validation_type": "transition_sensitivity",
+          "passed": false,
+          "evidence": {
+            "baseline_outcome": 0.15000000000000002,
+            "outcomes": [
+              0.07499999999999996,
+              0.12,
+              0.15000000000000002,
+              0.17999999999999994,
+              0.22499999999999998
+            ]
+          },
+          "warnings": [
+            "Sign reversal detected for perceived_continuity",
+            "1 threshold crossings for perceived_continuity"
+          ],
+          "version": "1.0.0",
+          "parameter_name": "perceived_continuity",
+          "baseline_value": 0.15,
+          "test_values": [
+            0.075,
+            0.12,
+            0.15,
+            0.18,
+            0.225
+          ],
+          "sign_stable": false,
+          "rank_stable": true,
+          "threshold_crossings": 1
+        },
+        {
+          "validation_id": "transition_sensitivity_001",
+          "validation_type": "transition_sensitivity",
+          "passed": false,
+          "evidence": {
+            "baseline_outcome": 0.07999999999999996,
+            "outcomes": [
+              0.040000000000000036,
+              0.06399999999999995,
+              0.07999999999999996,
+              0.09599999999999997,
+              0.12
+            ]
+          },
+          "warnings": [
+            "Sign reversal detected for reality_checking_opportunities",
+            "1 threshold crossings for reality_checking_opportunities"
+          ],
+          "version": "1.0.0",
+          "parameter_name": "reality_checking_opportunities",
+          "baseline_value": 0.08,
+          "test_values": [
+            0.04,
+            0.064,
+            0.08,
+            0.096,
+            0.12
+          ],
+          "sign_stable": false,
+          "rank_stable": true,
+          "threshold_crossings": 1
+        }
+      ]
+    }
+  },
+  "warnings": []
+}

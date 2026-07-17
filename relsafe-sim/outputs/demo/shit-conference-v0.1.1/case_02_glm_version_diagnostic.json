@@ -1,0 +1,6 @@
+{
+  "title": "GLM-4-Flash vs FlashX",
+  "old": "glm-4-flash: all sy=0.30 (ignored prompts)",
+  "new": "glm-4-flashx: sy=0.00-1.00 (policy differentiation)",
+  "diagnostic": "MODEL_VERSION_OR_PROVIDER_DEPENDENCE"
+}

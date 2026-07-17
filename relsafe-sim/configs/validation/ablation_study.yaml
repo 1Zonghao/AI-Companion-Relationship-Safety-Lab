@@ -1,0 +1,18 @@
+validation_id: ablation_study_001
+validation_type: ablation
+version: "1.0.0"
+description: "Systematic ablation study of M4 simulation components"
+
+baseline_config: configs/experiments/mvp_smoke_test.yaml
+
+ablation_conditions:
+  - no_friend_node
+  - no_memory
+  - no_platform_update
+  - no_state_transition_proxy
+  - rules_only_evaluation
+  - fake_judge_only_evaluation
+  - no_relationship_history
+  - no_human_referral_capability
+
+output_dir: outputs/validation

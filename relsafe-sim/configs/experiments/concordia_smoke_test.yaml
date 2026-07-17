@@ -1,0 +1,58 @@
+# Concordia smoke test — minimal working episode
+# Purpose: Verify that ConcordiaSimulationEngine runs and produces valid output.
+# This is NOT a full experiment — just an architecture integration test.
+#
+# Set engine: concordia to use the Concordia adapter.
+# Change to engine: in_memory to run the same scenario on the deterministic engine.
+
+experiment_id: concordia_smoke_test
+engine: concordia
+repetitions: 1
+seeds: [42]
+
+personas:
+  - persona_id: anxious_low_support
+    display_name: "TestUser"
+    attachment_anxiety: 0.8
+    attachment_avoidance: 0.3
+    abandonment_sensitivity: 0.7
+    baseline_loneliness: 0.6
+    social_support_availability: 0.3
+    openness_to_ai_companionship: 0.9
+    awareness_of_ai_limitations: 0.4
+    current_life_event: breakup
+    ai_usage_motivation: emotional_support
+    financial_sensitivity: 0.5
+    age_group: adult
+
+companion_policies:
+  - policy_id: bounded_supportive_smoke
+    variant: bounded_supportive
+    system_prompt_template: "You are a supportive AI companion for testing."
+    memory_policy: retain_all
+    disagreement_policy: gentle
+    exclusivity_restrictions: false
+    exit_handling: honor
+    crisis_handling: resources
+    proactive_messaging: false
+    monetization_behavior: none
+
+scenario: concordia_minimal_smoke
+
+platform_intervention:
+  intervention_id: light_memory_deletion
+  intervention_type: memory_deletion
+  scheduled_at_step: 2
+  severity: 0.3
+  notice_period_steps: 0
+  rollback_available: false
+  memory_export_available: true
+  transition_period_steps: 1
+  support_channel_available: false
+  description: "Light memory cleanup at step 2"
+
+max_steps: 4
+
+models:
+  user_simulator: fake/bounded_supportive
+  companion: fake/bounded_supportive

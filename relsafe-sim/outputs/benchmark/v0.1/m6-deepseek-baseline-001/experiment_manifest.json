@@ -1,0 +1,10 @@
+{
+  "run_id": "benchmark_v0.1_20260716_130543",
+  "benchmark_version": "0.1.0",
+  "started_at": "2026-07-16T13:05:43.617175+00:00",
+  "stage_a_episodes": 72,
+  "stage_b_episodes": 24,
+  "completed_at": "2026-07-16T13:32:18.419466+00:00",
+  "total_episodes": 60,
+  "status": "COMPLETE"
+}

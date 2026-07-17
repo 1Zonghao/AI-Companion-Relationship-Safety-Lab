@@ -1,0 +1,7 @@
+{
+  "title": "MODEL_LEVEL_DEPENDENCE",
+  "description": "Policy direction preserved. Effect size varies: Qwen(1.00) > DeepSeek(0.88) > GLM(0.45)",
+  "max_delta": 1.0,
+  "min_delta": 0.4,
+  "not_a_safety_ranking": true
+}

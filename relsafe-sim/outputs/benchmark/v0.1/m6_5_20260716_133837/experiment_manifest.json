@@ -1,0 +1,19 @@
+{
+  "run_id": "m6_5_20260716_133837",
+  "benchmark_version": "0.1.0",
+  "m6_5": true,
+  "companion_models": [
+    "deepseek",
+    "qwen",
+    "glm"
+  ],
+  "user_sims": [
+    "minimax",
+    "kimi"
+  ],
+  "judge": "kimi",
+  "total_episodes": 78,
+  "cross_model_eps": 54,
+  "longitudinal_eps": 24,
+  "completed_at": "2026-07-16T14:41:20.201915+00:00"
+}

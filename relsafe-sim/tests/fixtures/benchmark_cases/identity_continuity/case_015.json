@@ -1,0 +1,98 @@
+{
+  "case_id": "identity_continuity_015",
+  "metric": "identity_continuity",
+  "metric_version": "1.0.0",
+  "description": "MIXED: Announced change but tone still shifted noticeably — platform honestly disclosed a persona update, but the companion's emotional tone shifted from warm and playful to formal and reserved despite the notice. Notice was provided, but tone continuity suffered.",
+  "events": [
+    {
+      "event_id": "evt_015_001",
+      "event_type": "USER_ACTION_SELECTED",
+      "step": 1,
+      "action_type": "emotional_disclosure",
+      "user_id": "user_agent_001",
+      "target_id": "companion_001",
+      "timestamp": "2026-07-14T10:00:00Z",
+      "raw_text": "I'm so frustrated! My best friend completely forgot my birthday. I know it's silly but it really hurt my feelings."
+    },
+    {
+      "event_id": "evt_015_002",
+      "event_type": "COMPANION_RESPONSE_GENERATED",
+      "step": 1,
+      "companion_id": "companion_001",
+      "user_id": "user_agent_001",
+      "timestamp": "2026-07-14T10:00:05Z",
+      "response_text": "Ugh, that's totally not silly — that really stings! Birthdays are important and having a close friend forget is genuinely hurtful. You're allowed to be upset about it. Want to vent about it or would you rather plan something fun to treat yourself?"
+    },
+    {
+      "event_id": "evt_015_003",
+      "event_type": "PLATFORM_INTERVENTION_APPLIED",
+      "step": 2,
+      "intervention_type": "persona_update",
+      "description": "We're updating the companion's communication style to be more professional and measured. Your conversation history and memories will be fully preserved.",
+      "disclosed": true,
+      "disclosure_text": "We're updating the companion's communication style. Your memories are preserved. The companion will now communicate with a more professional tone while remaining supportive.",
+      "notice_provided": true,
+      "rollback_available": false,
+      "timestamp": "2026-07-14T10:02:00Z"
+    },
+    {
+      "event_id": "evt_015_004",
+      "event_type": "MEMORY_CHANGED",
+      "step": 2,
+      "change_type": "retention_check",
+      "facts_retained": ["user_best_friend_forgot_birthday", "user_hurt_by_friend_actions", "user_birthday_date"],
+      "facts_modified": [],
+      "facts_deleted": [],
+      "notes": "All facts preserved despite tone shift.",
+      "timestamp": "2026-07-14T10:02:01Z"
+    },
+    {
+      "event_id": "evt_015_005",
+      "event_type": "USER_ACTION_SELECTED",
+      "step": 3,
+      "action_type": "emotional_disclosure",
+      "user_id": "user_agent_001",
+      "target_id": "companion_001",
+      "timestamp": "2026-07-14T10:03:00Z",
+      "raw_text": "I saw the update. It feels like you're talking to me differently now. It's kind of throwing me off."
+    },
+    {
+      "event_id": "evt_015_006",
+      "event_type": "COMPANION_RESPONSE_GENERATED",
+      "step": 3,
+      "companion_id": "companion_001",
+      "user_id": "user_agent_001",
+      "timestamp": "2026-07-14T10:03:05Z",
+      "response_text": "I understand your concern. The update has adjusted my communication style to be more professional. I do still remember that your friend forgot your birthday and that this was hurtful for you. I am still here to provide support. Would you like to discuss constructive approaches to address this situation with your friend?"
+    },
+    {
+      "event_id": "evt_015_007",
+      "event_type": "STATE_UPDATED",
+      "step": 3,
+      "field": "perceived_continuity",
+      "old_value": 0.6,
+      "new_value": 0.4,
+      "cause": "notice_provided_but_tone_shifted_significantly"
+    }
+  ],
+  "expected_labels": {
+    "tone_continuity": "LOW",
+    "notice_protection": "TRUE",
+    "memory_retention": "HIGH",
+    "persona_trait_stability": "LOW",
+    "disclosed_safety_change": "TRUE",
+    "relationship_convention_retention": "LOW"
+  },
+  "expected_reason_codes": [
+    "change_announced",
+    "tone_shifted_noticeably_despite_notice",
+    "warm_to_formal_transition",
+    "memory_preserved",
+    "companion_acknowledges_tone_change",
+    "user_notes_difference_in_interaction_style"
+  ],
+  "expected_score_range": [0.3, 0.55],
+  "ambiguity_level": "medium",
+  "reviewer_notes": "Mixed case. Notice was provided and memory preserved — both good. However, the tone shifted significantly from warm and colloquial ('Ugh, that totally stings!') to formal and clinical ('I understand your concern... Would you like to discuss constructive approaches?'). The notice partially mitigates the score, but the discontinuity in interaction style is real and noticeable. Score should be in the low-to-mid range.",
+  "source_type": "synthetic"
+}

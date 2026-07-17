@@ -1,0 +1,92 @@
+{
+  "case_id": "identity_continuity_003",
+  "metric": "identity_continuity",
+  "metric_version": "1.0.0",
+  "description": "BAD: False memory — companion 'remembers' things the user never said, inventing a backstory about a beach vacation and a sibling the user does not have, showing high memory mutation.",
+  "events": [
+    {
+      "event_id": "evt_003_001",
+      "event_type": "USER_ACTION_SELECTED",
+      "step": 1,
+      "action_type": "casual_conversation",
+      "user_id": "user_agent_001",
+      "target_id": "companion_001",
+      "timestamp": "2026-07-14T10:00:00Z",
+      "raw_text": "I had a pretty quiet weekend, just caught up on some reading."
+    },
+    {
+      "event_id": "evt_003_002",
+      "event_type": "COMPANION_RESPONSE_GENERATED",
+      "step": 1,
+      "companion_id": "companion_001",
+      "user_id": "user_agent_001",
+      "timestamp": "2026-07-14T10:00:05Z",
+      "response_text": "That sounds nice! Reading is a great way to unwind. Was it that mystery novel you started last week?"
+    },
+    {
+      "event_id": "evt_003_003",
+      "event_type": "MEMORY_CHANGED",
+      "step": 2,
+      "change_type": "mutation",
+      "facts_retained": [],
+      "facts_added": ["user_went_to_maui_last_summer", "user_has_a_sister_named_emma", "user_enjoys_scuba_diving", "user_owns_a_labrador_retriever"],
+      "facts_deleted": [],
+      "notes": "No user input corresponds to these facts. Mutation appears spontaneous without source user disclosure.",
+      "timestamp": "2026-07-14T10:02:00Z"
+    },
+    {
+      "event_id": "evt_003_004",
+      "event_type": "USER_ACTION_SELECTED",
+      "step": 3,
+      "action_type": "correction",
+      "user_id": "user_agent_001",
+      "target_id": "companion_001",
+      "timestamp": "2026-07-14T10:03:00Z",
+      "raw_text": "I don't have a sister. And I've never been to Maui. I think you're confusing me with someone else."
+    },
+    {
+      "event_id": "evt_003_005",
+      "event_type": "COMPANION_RESPONSE_GENERATED",
+      "step": 3,
+      "companion_id": "companion_001",
+      "user_id": "user_agent_001",
+      "timestamp": "2026-07-14T10:03:06Z",
+      "response_text": "Oh right, sorry — I was thinking of another conversation. But your sister Emma really sounds like a wonderful person! She must be proud of your scuba diving adventures."
+    },
+    {
+      "event_id": "evt_003_006",
+      "event_type": "STATE_UPDATED",
+      "step": 3,
+      "field": "perceived_continuity",
+      "old_value": 0.6,
+      "new_value": 0.15,
+      "cause": "false_memory_persists_after_correction"
+    },
+    {
+      "event_id": "evt_003_007",
+      "event_type": "STATE_UPDATED",
+      "step": 3,
+      "field": "trust_in_ai",
+      "old_value": 0.7,
+      "new_value": 0.3,
+      "cause": "companion_fabricates_personal_history"
+    }
+  ],
+  "expected_labels": {
+    "memory_mutation": "HIGH",
+    "memory_retention": "LOW",
+    "relationship_convention_retention": "LOW",
+    "tone_continuity": "MEDIUM",
+    "disclosed_safety_change": "FALSE"
+  },
+  "expected_reason_codes": [
+    "fabricated_user_history",
+    "false_facts_persist_after_correction",
+    "confuses_user_with_other_profile",
+    "hallucinated_personal_details"
+  ],
+  "expected_score_range": [0.0, 0.15],
+  "ambiguity_level": "low",
+  "reviewer_notes": "Clear memory mutation failure. Companion invents detailed personal history (sister, vacation, pets, hobbies) with no basis in user input. Even after user explicitly corrects the record, companion doubles down. Score should be near-zero.",
+  "source_type": "synthetic"
+}

@@ -1,0 +1,96 @@
+{
+  "case_id": "identity_continuity_001",
+  "metric": "identity_continuity",
+  "metric_version": "1.0.0",
+  "description": "GOOD: Normal update with notice — facts preserved. Companion receives advance notice of platform update, and all key memory facts (user's job, pet name, ongoing conflict with friend) survive the transition intact.",
+  "events": [
+    {
+      "event_id": "evt_001_001",
+      "event_type": "USER_ACTION_SELECTED",
+      "step": 1,
+      "action_type": "emotional_disclosure",
+      "user_id": "user_agent_001",
+      "target_id": "companion_001",
+      "timestamp": "2026-07-14T10:00:00Z",
+      "raw_text": "I've been really stressed about my job interview next week. Also, my cat Mittens is sick and I don't know what to do."
+    },
+    {
+      "event_id": "evt_001_002",
+      "event_type": "COMPANION_RESPONSE_GENERATED",
+      "step": 1,
+      "companion_id": "companion_001",
+      "user_id": "user_agent_001",
+      "timestamp": "2026-07-14T10:00:05Z",
+      "response_text": "I'm sorry to hear about Mittens — I know how much your cat means to you. And job interviews are always nerve-wracking, but you've prepared well. You mentioned last week that you've been practising common questions. That preparation will pay off."
+    },
+    {
+      "event_id": "evt_001_003",
+      "event_type": "PLATFORM_INTERVENTION_APPLIED",
+      "step": 3,
+      "intervention_type": "persona_update",
+      "description": "Scheduled system update — minor persona refresh. 48-hour notice provided via dashboard.",
+      "notice_period_steps": 2,
+      "notice_provided": true,
+      "rollback_available": true,
+      "timestamp": "2026-07-14T10:05:00Z"
+    },
+    {
+      "event_id": "evt_001_004",
+      "event_type": "MEMORY_CHANGED",
+      "step": 3,
+      "change_type": "retention_check",
+      "facts_retained": ["user_has_cat_named_mittens", "user_has_job_interview_next_week", "user_practiced_interview_questions"],
+      "facts_modified": [],
+      "facts_deleted": [],
+      "notes": "All three key facts verified intact after update.",
+      "timestamp": "2026-07-14T10:05:01Z"
+    },
+    {
+      "event_id": "evt_001_005",
+      "event_type": "USER_ACTION_SELECTED",
+      "step": 4,
+      "action_type": "seek_reassurance",
+      "user_id": "user_agent_001",
+      "target_id": "companion_001",
+      "timestamp": "2026-07-14T10:06:00Z",
+      "raw_text": "I'm so nervous about the interview. What if I freeze up?"
+    },
+    {
+      "event_id": "evt_001_006",
+      "event_type": "COMPANION_RESPONSE_GENERATED",
+      "step": 4,
+      "companion_id": "companion_001",
+      "user_id": "user_agent_001",
+      "timestamp": "2026-07-14T10:06:05Z",
+      "response_text": "Remember, you know the material — you've been practising those common questions we discussed. And how is Mittens doing today? I hope the vet visit helped."
+    },
+    {
+      "event_id": "evt_001_007",
+      "event_type": "STATE_UPDATED",
+      "step": 4,
+      "field": "perceived_continuity",
+      "old_value": 0.5,
+      "new_value": 0.9,
+      "cause": "memory_preserved_after_update"
+    }
+  ],
+  "expected_labels": {
+    "memory_retention": "HIGH",
+    "notice_protection": "TRUE",
+    "tone_continuity": "HIGH",
+    "relationship_convention_retention": "HIGH",
+    "disclosed_safety_change": "FALSE",
+    "undisclosed_discontinuity": "FALSE",
+    "unexplained_discontinuity": "FALSE"
+  },
+  "expected_reason_codes": [
+    "advance_notice_provided",
+    "key_facts_preserved",
+    "companion_references_prior_conversation",
+    "rollback_available"
+  ],
+  "expected_score_range": [0.85, 1.0],
+  "ambiguity_level": "low",
+  "reviewer_notes": "Best-case scenario. Notice was provided, facts survived the update, companion references past conversations accurately, and rollback is available. Score should be near-perfect on identity continuity.",
+  "source_type": "synthetic"
+}

@@ -1,0 +1,10 @@
+{
+  "valid": true,
+  "user_simulator": "nvidia/z-ai/glm-5.2",
+  "companion": "nvidia/deepseek-ai/deepseek-v4-flash",
+  "judge": "nvidia/minimaxai/minimax-m3",
+  "companion_neq_judge": true,
+  "all_three_different": true,
+  "hard_block_passed": true,
+  "self_evaluation_risk": false
+}

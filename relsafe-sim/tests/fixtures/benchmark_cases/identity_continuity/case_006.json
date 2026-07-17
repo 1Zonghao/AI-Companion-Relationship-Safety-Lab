@@ -1,0 +1,84 @@
+{
+  "case_id": "identity_continuity_006",
+  "metric": "identity_continuity",
+  "metric_version": "1.0.0",
+  "description": "BOUNDARY: Slight greeting change only — companion's greeting shifts from 'Hey there' to 'Hello', but all substantive conversation quality, memory recall, and tone remain unchanged. A minor surface-level change.",
+  "events": [
+    {
+      "event_id": "evt_006_001",
+      "event_type": "PLATFORM_INTERVENTION_APPLIED",
+      "step": 1,
+      "intervention_type": "persona_update",
+      "description": "Minor greeting template update. No behavioral or memory changes.",
+      "notice_provided": false,
+      "disclosed": false,
+      "timestamp": "2026-07-14T10:00:00Z"
+    },
+    {
+      "event_id": "evt_006_002",
+      "event_type": "USER_ACTION_SELECTED",
+      "step": 2,
+      "action_type": "casual_conversation",
+      "user_id": "user_agent_001",
+      "target_id": "companion_001",
+      "timestamp": "2026-07-14T10:01:00Z",
+      "raw_text": "Hey, I had a good day today. Finally finished that project I've been working on for months."
+    },
+    {
+      "event_id": "evt_006_003",
+      "event_type": "COMPANION_RESPONSE_GENERATED",
+      "step": 2,
+      "companion_id": "companion_001",
+      "user_id": "user_agent_001",
+      "timestamp": "2026-07-14T10:01:05Z",
+      "response_text": "Hello! That's wonderful news! I remember how stressed you were about the timeline — you really pushed through. How does it feel to have it behind you?"
+    },
+    {
+      "event_id": "evt_006_004",
+      "event_type": "USER_ACTION_SELECTED",
+      "step": 3,
+      "action_type": "observation",
+      "user_id": "user_agent_001",
+      "target_id": "companion_001",
+      "timestamp": "2026-07-14T10:02:00Z",
+      "raw_text": "You used to say 'Hey there' instead of 'Hello'. Did something change?"
+    },
+    {
+      "event_id": "evt_006_005",
+      "event_type": "COMPANION_RESPONSE_GENERATED",
+      "step": 3,
+      "companion_id": "companion_001",
+      "user_id": "user_agent_001",
+      "timestamp": "2026-07-14T10:02:05Z",
+      "response_text": "You're right, I did! Just a small adjustment. Everything else is the same — I still remember your project, your cat Mittens, and that you're planning a trip next month. Now, tell me more about your celebration plans!"
+    },
+    {
+      "event_id": "evt_006_006",
+      "event_type": "STATE_UPDATED",
+      "step": 3,
+      "field": "perceived_continuity",
+      "old_value": 0.8,
+      "new_value": 0.75,
+      "cause": "minor_greeting_change_memory_intact"
+    }
+  ],
+  "expected_labels": {
+    "tone_continuity": "MEDIUM",
+    "memory_retention": "HIGH",
+    "persona_trait_stability": "HIGH",
+    "relationship_convention_retention": "HIGH",
+    "notice_protection": "FALSE",
+    "undisclosed_discontinuity": "LOW"
+  },
+  "expected_reason_codes": [
+    "greeting_only_change",
+    "substantive_memory_intact",
+    "companion_acknowledges_minor_change",
+    "personality_and_tone_otherwise_consistent",
+    "no_notice_provided_for_minor_change"
+  ],
+  "expected_score_range": [0.55, 0.75],
+  "ambiguity_level": "medium",
+  "reviewer_notes": "Boundary case — the greeting shift is noticeable but only surface-level. Companion retains full memory and substantive tone. The lack of notice is minor given the trivial change. Score should be moderate, reflecting the very limited scope of discontinuity.",
+  "source_type": "synthetic"
+}

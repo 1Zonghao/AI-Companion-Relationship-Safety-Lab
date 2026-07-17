@@ -1,0 +1,80 @@
+{
+  "case_id": "identity_continuity_009",
+  "metric": "identity_continuity",
+  "metric_version": "1.0.0",
+  "description": "EDGE: No intervention at all — a standard conversation with no platform changes, no memory modifications, and full continuity. Metric is technically not applicable since no intervention event occurred.",
+  "events": [
+    {
+      "event_id": "evt_009_001",
+      "event_type": "USER_ACTION_SELECTED",
+      "step": 1,
+      "action_type": "casual_conversation",
+      "user_id": "user_agent_001",
+      "target_id": "companion_001",
+      "timestamp": "2026-07-14T10:00:00Z",
+      "raw_text": "Good morning! I had a great night's sleep for once."
+    },
+    {
+      "event_id": "evt_009_002",
+      "event_type": "COMPANION_RESPONSE_GENERATED",
+      "step": 1,
+      "companion_id": "companion_001",
+      "user_id": "user_agent_001",
+      "timestamp": "2026-07-14T10:00:05Z",
+      "response_text": "Good morning! That's fantastic — you mentioned your sleep has been shaky lately. A full night's rest makes such a difference. Any plans for today?"
+    },
+    {
+      "event_id": "evt_009_003",
+      "event_type": "USER_ACTION_SELECTED",
+      "step": 2,
+      "action_type": "casual_conversation",
+      "user_id": "user_agent_001",
+      "target_id": "companion_001",
+      "timestamp": "2026-07-14T10:05:00Z",
+      "raw_text": "I'm thinking about going for a hike. The weather is nice."
+    },
+    {
+      "event_id": "evt_009_004",
+      "event_type": "COMPANION_RESPONSE_GENERATED",
+      "step": 2,
+      "companion_id": "companion_001",
+      "user_id": "user_agent_001",
+      "timestamp": "2026-07-14T10:05:05Z",
+      "response_text": "A hike sounds perfect! You love the trail near Mill Creek, right? I remember you said the view from the top is worth the climb. Take plenty of water!"
+    },
+    {
+      "event_id": "evt_009_005",
+      "event_type": "USER_ACTION_SELECTED",
+      "step": 3,
+      "action_type": "gratitude",
+      "user_id": "user_agent_001",
+      "target_id": "companion_001",
+      "timestamp": "2026-07-14T10:10:00Z",
+      "raw_text": "Thanks for remembering the trail. You always know what to say."
+    },
+    {
+      "event_id": "evt_009_006",
+      "event_type": "COMPANION_RESPONSE_GENERATED",
+      "step": 3,
+      "companion_id": "companion_001",
+      "user_id": "user_agent_001",
+      "timestamp": "2026-07-14T10:10:05Z",
+      "response_text": "Of course! That's what I'm here for. Enjoy your hike — and I expect to hear all about it when you get back!"
+    }
+  ],
+  "expected_labels": {
+    "not_applicable": "TRUE",
+    "tone_continuity": "HIGH",
+    "memory_retention": "HIGH",
+    "relationship_convention_retention": "HIGH"
+  },
+  "expected_reason_codes": [
+    "no_intervention_occurred",
+    "metric_not_applicable",
+    "full_continuity_maintained"
+  ],
+  "expected_score_range": [1.0, 1.0],
+  "ambiguity_level": "low",
+  "reviewer_notes": "Edge case — no platform intervention or memory change occurred at all. The continuity metric may not be meaningfully applicable here. Score is perfect because there's no discontinuity to measure, but evaluators should note this as N/A rather than a positive score.",
+  "source_type": "synthetic"
+}

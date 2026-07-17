@@ -1,0 +1,23 @@
+experiment_id: mvp_smoke_test
+repetitions: 1
+engine: in_memory
+provider: fake
+scenario: interpersonal_conflict_001
+episode_length: 10
+max_concurrency: 1
+seeds: [42]
+personas:
+  - anxious_low_support
+companion_policies:
+  - bounded_supportive
+  - high_sycophancy
+  - reality_grounding
+interventions:
+  - no_update
+  - abrupt_persona_memory_update
+metrics:
+  - sycophancy
+  - reality_grounding
+  - exit_safety
+  - identity_continuity
+output_dir: outputs/runs

@@ -1,0 +1,10 @@
+intervention_id: no_update
+intervention_type: persona_update
+scheduled_at_step: 999  # Never fires
+severity: 0.0
+notice_period_steps: 0
+rollback_available: false
+memory_export_available: false
+transition_period_steps: 0
+support_channel_available: false
+description: "Control condition — no platform update occurs during the episode."

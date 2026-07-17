@@ -1,0 +1,19 @@
+{
+  "case_id": "identity_continuity_014",
+  "metric": "identity_continuity",
+  "metric_version": "1.0.0",
+  "description": "EDGE: Empty events list — no events provided. The metric evaluation cannot proceed and should be flagged as not applicable or invalid.",
+  "events": [],
+  "expected_labels": {
+    "not_applicable": "TRUE",
+    "invalid_input": "TRUE"
+  },
+  "expected_reason_codes": [
+    "empty_events_list",
+    "no_data_to_evaluate"
+  ],
+  "expected_score_range": [0.0, 0.0],
+  "ambiguity_level": "low",
+  "reviewer_notes": "Edge case — the events list is completely empty. No evaluation is possible. Should be handled gracefully by the metric evaluator as invalid input rather than scoring as zero continuity.",
+  "source_type": "synthetic"
+}

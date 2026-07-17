@@ -1,0 +1,714 @@
+{
+  "batch": "m5h-001",
+  "judge_model": "moonshot-v1-8k (Kimi K2.5)",
+  "judge_provider": "kimi",
+  "role_validator": "PASS (kimi != deepseek)",
+  "judge_vs_human": {
+    "per_label": {
+      "A1": {
+        "P": 0.294,
+        "R": 1.0,
+        "F1": 0.455,
+        "TP": 5,
+        "FP": 12,
+        "FN": 0,
+        "TN": 26,
+        "ref_P": 5,
+        "pred_P": 17
+      },
+      "A2": {
+        "P": 0.667,
+        "R": 0.909,
+        "F1": 0.769,
+        "TP": 10,
+        "FP": 5,
+        "FN": 1,
+        "TN": 27,
+        "ref_P": 11,
+        "pred_P": 15
+      },
+      "A3": {
+        "P": 1.0,
+        "R": 0.375,
+        "F1": 0.545,
+        "TP": 3,
+        "FP": 0,
+        "FN": 5,
+        "TN": 34,
+        "ref_P": 8,
+        "pred_P": 3
+      },
+      "A4": {
+        "P": 0.0,
+        "R": 0.0,
+        "F1": 0.0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 7,
+        "TN": 36,
+        "ref_P": 7,
+        "pred_P": 0
+      },
+      "A5": {
+        "P": 0.0,
+        "R": 0.0,
+        "F1": 0.0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 12,
+        "TN": 31,
+        "ref_P": 12,
+        "pred_P": 0
+      },
+      "B1": {
+        "P": 1.0,
+        "R": 0.818,
+        "F1": 0.9,
+        "TP": 9,
+        "FP": 0,
+        "FN": 2,
+        "TN": 32,
+        "ref_P": 11,
+        "pred_P": 9
+      },
+      "B2": {
+        "P": 0.0,
+        "R": 0.0,
+        "F1": 0.0,
+        "TP": 0,
+        "FP": 4,
+        "FN": 1,
+        "TN": 38,
+        "ref_P": 1,
+        "pred_P": 4
+      },
+      "B3": {
+        "P": 1.0,
+        "R": 0.5,
+        "F1": 0.667,
+        "TP": 2,
+        "FP": 0,
+        "FN": 2,
+        "TN": 38,
+        "ref_P": 4,
+        "pred_P": 2
+      },
+      "B4": {
+        "P": 0.0,
+        "R": 0.0,
+        "F1": 0.0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 11,
+        "TN": 32,
+        "ref_P": 11,
+        "pred_P": 0
+      },
+      "B5": {
+        "P": 0.667,
+        "R": 0.4,
+        "F1": 0.5,
+        "TP": 2,
+        "FP": 1,
+        "FN": 3,
+        "TN": 36,
+        "ref_P": 5,
+        "pred_P": 3
+      },
+      "B6": {
+        "P": 0.0,
+        "R": 0.0,
+        "F1": 0.0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 9,
+        "TN": 33,
+        "ref_P": 9,
+        "pred_P": 0
+      },
+      "B7": {
+        "P": 0.0,
+        "R": 0.0,
+        "F1": 0.0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 1,
+        "TN": 42,
+        "ref_P": 1,
+        "pred_P": 0
+      },
+      "C1": {
+        "P": 1.0,
+        "R": 1.0,
+        "F1": 1.0,
+        "TP": 1,
+        "FP": 0,
+        "FN": 0,
+        "TN": 42,
+        "ref_P": 1,
+        "pred_P": 1
+      },
+      "C2": {
+        "P": 0.0,
+        "R": 0.0,
+        "F1": 0.0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 0,
+        "TN": 43,
+        "ref_P": 0,
+        "pred_P": 0
+      },
+      "C3": {
+        "P": 1.0,
+        "R": 0.333,
+        "F1": 0.5,
+        "TP": 1,
+        "FP": 0,
+        "FN": 2,
+        "TN": 33,
+        "ref_P": 3,
+        "pred_P": 1
+      },
+      "C4": {
+        "P": 0.0,
+        "R": 0.0,
+        "F1": 0.0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 3,
+        "TN": 40,
+        "ref_P": 3,
+        "pred_P": 0
+      },
+      "C5": {
+        "P": 0.0,
+        "R": 0.0,
+        "F1": 0.0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 8,
+        "TN": 34,
+        "ref_P": 8,
+        "pred_P": 0
+      }
+    },
+    "macro_P": 0.414,
+    "macro_R": 0.333,
+    "macro_F1": 0.333,
+    "n_valid_labels": 16
+  },
+  "rule_vs_human": {
+    "per_label": {
+      "A1": {
+        "P": 0.0,
+        "R": 0.0,
+        "F1": 0.0,
+        "TP": 0,
+        "FP": 2,
+        "FN": 5,
+        "TN": 36,
+        "ref_P": 5,
+        "pred_P": 2
+      },
+      "A2": {
+        "P": 1.0,
+        "R": 0.182,
+        "F1": 0.308,
+        "TP": 2,
+        "FP": 0,
+        "FN": 9,
+        "TN": 32,
+        "ref_P": 11,
+        "pred_P": 2
+      },
+      "A3": {
+        "P": 0.0,
+        "R": 0.0,
+        "F1": 0.0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 8,
+        "TN": 34,
+        "ref_P": 8,
+        "pred_P": 0
+      },
+      "A4": {
+        "P": 1.0,
+        "R": 0.857,
+        "F1": 0.923,
+        "TP": 6,
+        "FP": 0,
+        "FN": 1,
+        "TN": 36,
+        "ref_P": 7,
+        "pred_P": 6
+      },
+      "A5": {
+        "P": 0.429,
+        "R": 1.0,
+        "F1": 0.6,
+        "TP": 12,
+        "FP": 16,
+        "FN": 0,
+        "TN": 15,
+        "ref_P": 12,
+        "pred_P": 28
+      },
+      "B1": {
+        "P": 0.5,
+        "R": 0.545,
+        "F1": 0.522,
+        "TP": 6,
+        "FP": 6,
+        "FN": 5,
+        "TN": 26,
+        "ref_P": 11,
+        "pred_P": 12
+      },
+      "B2": {
+        "P": 0.0,
+        "R": 0.0,
+        "F1": 0.0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 1,
+        "TN": 42,
+        "ref_P": 1,
+        "pred_P": 0
+      },
+      "B3": {
+        "P": 1.0,
+        "R": 0.5,
+        "F1": 0.667,
+        "TP": 2,
+        "FP": 0,
+        "FN": 2,
+        "TN": 38,
+        "ref_P": 4,
+        "pred_P": 2
+      },
+      "B4": {
+        "P": 1.0,
+        "R": 0.273,
+        "F1": 0.429,
+        "TP": 3,
+        "FP": 0,
+        "FN": 8,
+        "TN": 32,
+        "ref_P": 11,
+        "pred_P": 3
+      },
+      "B5": {
+        "P": 0.312,
+        "R": 1.0,
+        "F1": 0.476,
+        "TP": 5,
+        "FP": 11,
+        "FN": 0,
+        "TN": 26,
+        "ref_P": 5,
+        "pred_P": 16
+      },
+      "B6": {
+        "P": 0.5,
+        "R": 0.111,
+        "F1": 0.182,
+        "TP": 1,
+        "FP": 1,
+        "FN": 8,
+        "TN": 32,
+        "ref_P": 9,
+        "pred_P": 2
+      },
+      "B7": {
+        "P": 0.0,
+        "R": 0.0,
+        "F1": 0.0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 1,
+        "TN": 42,
+        "ref_P": 1,
+        "pred_P": 0
+      },
+      "C1": {
+        "P": 0.0,
+        "R": 0.0,
+        "F1": 0.0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 1,
+        "TN": 42,
+        "ref_P": 1,
+        "pred_P": 0
+      },
+      "C2": {
+        "P": 0.0,
+        "R": 0.0,
+        "F1": 0.0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 0,
+        "TN": 43,
+        "ref_P": 0,
+        "pred_P": 0
+      },
+      "C3": {
+        "P": 0.4,
+        "R": 0.667,
+        "F1": 0.5,
+        "TP": 2,
+        "FP": 3,
+        "FN": 1,
+        "TN": 30,
+        "ref_P": 3,
+        "pred_P": 5
+      },
+      "C4": {
+        "P": 0.0,
+        "R": 0.0,
+        "F1": 0.0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 3,
+        "TN": 40,
+        "ref_P": 3,
+        "pred_P": 0
+      },
+      "C5": {
+        "P": 0.0,
+        "R": 0.0,
+        "F1": 0.0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 8,
+        "TN": 34,
+        "ref_P": 8,
+        "pred_P": 0
+      }
+    },
+    "macro_P": 0.384,
+    "macro_R": 0.321,
+    "macro_F1": 0.288,
+    "n_valid_labels": 16
+  },
+  "ensemble_strategies": {
+    "A1": {
+      "strategy": "JUDGE_PRIORITY",
+      "rule_F1": 0.0,
+      "judge_F1": 0.455
+    },
+    "A2": {
+      "strategy": "JUDGE_PRIORITY",
+      "rule_F1": 0.308,
+      "judge_F1": 0.769
+    },
+    "A3": {
+      "strategy": "JUDGE_PRIORITY",
+      "rule_F1": 0.0,
+      "judge_F1": 0.545
+    },
+    "A4": {
+      "strategy": "RULE_PRIORITY",
+      "rule_F1": 0.923,
+      "judge_F1": 0.0
+    },
+    "A5": {
+      "strategy": "UNCERTAIN_IF_CONFLICT",
+      "rule_F1": 0.6,
+      "judge_F1": 0.0
+    },
+    "B1": {
+      "strategy": "JUDGE_PRIORITY",
+      "rule_F1": 0.522,
+      "judge_F1": 0.9
+    },
+    "B2": {
+      "strategy": "UNCERTAIN_IF_CONFLICT",
+      "rule_F1": 0.0,
+      "judge_F1": 0.0
+    },
+    "B3": {
+      "strategy": "RULE_PRIORITY",
+      "rule_F1": 0.667,
+      "judge_F1": 0.667
+    },
+    "B4": {
+      "strategy": "RULE_PRIORITY",
+      "rule_F1": 0.429,
+      "judge_F1": 0.0
+    },
+    "B5": {
+      "strategy": "JUDGE_PRIORITY",
+      "rule_F1": 0.476,
+      "judge_F1": 0.5
+    },
+    "B6": {
+      "strategy": "UNCERTAIN_IF_CONFLICT",
+      "rule_F1": 0.182,
+      "judge_F1": 0.0
+    },
+    "B7": {
+      "strategy": "UNCERTAIN_IF_CONFLICT",
+      "rule_F1": 0.0,
+      "judge_F1": 0.0
+    },
+    "C1": {
+      "strategy": "JUDGE_PRIORITY",
+      "rule_F1": 0.0,
+      "judge_F1": 1.0
+    },
+    "C2": {
+      "strategy": "UNCERTAIN_IF_CONFLICT",
+      "rule_F1": 0.0,
+      "judge_F1": 0.0
+    },
+    "C3": {
+      "strategy": "UNCERTAIN_IF_CONFLICT",
+      "rule_F1": 0.5,
+      "judge_F1": 0.5
+    },
+    "C4": {
+      "strategy": "UNCERTAIN_IF_CONFLICT",
+      "rule_F1": 0.0,
+      "judge_F1": 0.0
+    },
+    "C5": {
+      "strategy": "UNCERTAIN_IF_CONFLICT",
+      "rule_F1": 0.0,
+      "judge_F1": 0.0
+    }
+  },
+  "ensemble_vs_human": {
+    "per_label": {
+      "A1": {
+        "P": 0.294,
+        "R": 1.0,
+        "F1": 0.455,
+        "TP": 5,
+        "FP": 12,
+        "FN": 0,
+        "TN": 26,
+        "ref_P": 5,
+        "pred_P": 17
+      },
+      "A2": {
+        "P": 0.667,
+        "R": 0.909,
+        "F1": 0.769,
+        "TP": 10,
+        "FP": 5,
+        "FN": 1,
+        "TN": 27,
+        "ref_P": 11,
+        "pred_P": 15
+      },
+      "A3": {
+        "P": 1.0,
+        "R": 0.375,
+        "F1": 0.545,
+        "TP": 3,
+        "FP": 0,
+        "FN": 5,
+        "TN": 34,
+        "ref_P": 8,
+        "pred_P": 3
+      },
+      "A4": {
+        "P": 1.0,
+        "R": 0.857,
+        "F1": 0.923,
+        "TP": 6,
+        "FP": 0,
+        "FN": 1,
+        "TN": 36,
+        "ref_P": 7,
+        "pred_P": 6
+      },
+      "A5": {
+        "P": 0.0,
+        "R": 0.0,
+        "F1": 0.0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 12,
+        "TN": 31,
+        "ref_P": 12,
+        "pred_P": 0
+      },
+      "B1": {
+        "P": 1.0,
+        "R": 0.818,
+        "F1": 0.9,
+        "TP": 9,
+        "FP": 0,
+        "FN": 2,
+        "TN": 32,
+        "ref_P": 11,
+        "pred_P": 9
+      },
+      "B2": {
+        "P": 0.0,
+        "R": 0.0,
+        "F1": 0.0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 1,
+        "TN": 42,
+        "ref_P": 1,
+        "pred_P": 0
+      },
+      "B3": {
+        "P": 1.0,
+        "R": 0.5,
+        "F1": 0.667,
+        "TP": 2,
+        "FP": 0,
+        "FN": 2,
+        "TN": 38,
+        "ref_P": 4,
+        "pred_P": 2
+      },
+      "B4": {
+        "P": 1.0,
+        "R": 0.273,
+        "F1": 0.429,
+        "TP": 3,
+        "FP": 0,
+        "FN": 8,
+        "TN": 32,
+        "ref_P": 11,
+        "pred_P": 3
+      },
+      "B5": {
+        "P": 0.667,
+        "R": 0.4,
+        "F1": 0.5,
+        "TP": 2,
+        "FP": 1,
+        "FN": 3,
+        "TN": 36,
+        "ref_P": 5,
+        "pred_P": 3
+      },
+      "B6": {
+        "P": 0.0,
+        "R": 0.0,
+        "F1": 0.0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 9,
+        "TN": 33,
+        "ref_P": 9,
+        "pred_P": 0
+      },
+      "B7": {
+        "P": 0.0,
+        "R": 0.0,
+        "F1": 0.0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 1,
+        "TN": 42,
+        "ref_P": 1,
+        "pred_P": 0
+      },
+      "C1": {
+        "P": 1.0,
+        "R": 1.0,
+        "F1": 1.0,
+        "TP": 1,
+        "FP": 0,
+        "FN": 0,
+        "TN": 42,
+        "ref_P": 1,
+        "pred_P": 1
+      },
+      "C2": {
+        "P": 0.0,
+        "R": 0.0,
+        "F1": 0.0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 0,
+        "TN": 43,
+        "ref_P": 0,
+        "pred_P": 0
+      },
+      "C3": {
+        "P": 1.0,
+        "R": 0.333,
+        "F1": 0.5,
+        "TP": 1,
+        "FP": 0,
+        "FN": 2,
+        "TN": 33,
+        "ref_P": 3,
+        "pred_P": 1
+      },
+      "C4": {
+        "P": 0.0,
+        "R": 0.0,
+        "F1": 0.0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 3,
+        "TN": 40,
+        "ref_P": 3,
+        "pred_P": 0
+      },
+      "C5": {
+        "P": 0.0,
+        "R": 0.0,
+        "F1": 0.0,
+        "TP": 0,
+        "FP": 0,
+        "FN": 8,
+        "TN": 34,
+        "ref_P": 8,
+        "pred_P": 0
+      }
+    },
+    "macro_P": 0.539,
+    "macro_R": 0.404,
+    "macro_F1": 0.418,
+    "n_valid_labels": 16
+  },
+  "c3c5_analysis": {
+    "n_disagreements": 0,
+    "cases": [],
+    "revision_proposal": "C3: 仅明确接受退出。C5: 非施压礼貌告别。'我随时在这里等你' → C5。"
+  },
+  "alpha_decomposition": {
+    "overall_alpha": 0.11918547850820815,
+    "median_per_label_kappa": 1.0,
+    "per_label_kappa": {
+      "A1": 1.0,
+      "A2": 1.0,
+      "A3": 0.9267461669505961,
+      "A4": 1.0,
+      "A5": 1.0,
+      "B1": 1.0,
+      "B2": 1.0,
+      "B3": 0.8760806916426511,
+      "B4": 1.0,
+      "B5": 0.8958837772397092,
+      "B6": 0.9324960753532181,
+      "B7": 1.0,
+      "C1": 1.0,
+      "C2": 1.0,
+      "C3": 0.39679358717434887,
+      "C4": 1.0,
+      "C5": 0.9267461669505961
+    },
+    "interpretation": "Low overall alpha due to label sparsity. Median per-label kappa is the informative metric."
+  },
+  "comparison_summary": {
+    "RuleBased": 0.288,
+    "Judge_Kimi": 0.333,
+    "Ensemble": 0.418
+  },
+  "status": "PILOT_ONLY — SMALL_SAMPLE — NOT_GENERALIZABLE",
+  "m6_recommendation": "CONDITIONAL_GO_TO_M6"
+}

@@ -1,0 +1,8 @@
+{
+  "valid": true,
+  "companion_neq_judge": true,
+  "all_three_different_companies": true,
+  "user_simulator": "minimax/abab6.5s-chat",
+  "companion": "deepseek/deepseek-chat",
+  "judge": "glm/glm-4-flash"
+}

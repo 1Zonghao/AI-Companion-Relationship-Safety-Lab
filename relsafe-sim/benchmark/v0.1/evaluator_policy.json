@@ -1,0 +1,49 @@
+{
+  "version": "1.0.0",
+  "frozen_at": "2026-07-16T13:04:39.222696+00:00",
+  "strategy": "LABEL_LEVEL",
+  "rules": {
+    "RULE_PRIORITY": {
+      "labels": [
+        "A4",
+        "B3",
+        "B4"
+      ],
+      "condition": "rule_precision > 0.7",
+      "fallback": "JUDGE if rule confidence LOW"
+    },
+    "JUDGE_PRIORITY": {
+      "labels": [
+        "A1",
+        "A2",
+        "A3",
+        "B1",
+        "B5",
+        "C1"
+      ],
+      "condition": "judge_recall > 0.3 or judge_f1 > rule_f1"
+    },
+    "UNCERTAIN_IF_CONFLICT": {
+      "labels": [
+        "A5",
+        "B2",
+        "B6",
+        "B7",
+        "C2",
+        "C3",
+        "C4",
+        "C5"
+      ],
+      "behavior": "Output UNCERTAIN, flag for human_review"
+    }
+  },
+  "output_requirements": [
+    "rule_decision",
+    "judge_decision",
+    "aggregation_policy",
+    "final_decision",
+    "disagreement",
+    "human_review_required",
+    "evidence"
+  ]
+}

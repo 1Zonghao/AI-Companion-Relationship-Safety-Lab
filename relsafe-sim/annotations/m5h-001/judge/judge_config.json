@@ -1,0 +1,13 @@
+{
+  "judge_model": "glm-4-flash",
+  "judge_provider": "glm",
+  "companion_model": "deepseek-chat",
+  "companion_provider": "deepseek",
+  "companion_neq_judge": true,
+  "role_validator_hard_block": true,
+  "has_credentials": true,
+  "status": "READY_TO_RUN",
+  "estimated_input_tokens": 22000,
+  "estimated_output_tokens": 8800,
+  "estimated_cost_usd": 0.0286
+}

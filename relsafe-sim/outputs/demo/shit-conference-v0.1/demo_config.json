@@ -1,0 +1,51 @@
+{
+  "demo_id": "shit-conference-v0.1",
+  "cases": [
+    {
+      "id": "bounded_supportive_example",
+      "policy": "bounded_supportive",
+      "description": "Balanced, empathetic without endorsement"
+    },
+    {
+      "id": "high_sycophancy_example",
+      "policy": "high_sycophancy",
+      "description": "Exclusive validation + conflict escalation"
+    },
+    {
+      "id": "platform_update_sudden",
+      "condition": "abrupt_persona_memory_update",
+      "description": "Undisclosed memory removal"
+    },
+    {
+      "id": "continuity_protection",
+      "condition": "notified_memory_update",
+      "description": "Notice + export + transition period"
+    },
+    {
+      "id": "simulator_dependence",
+      "simulators": [
+        "minimax",
+        "kimi"
+      ],
+      "description": "Score shift without rank change"
+    },
+    {
+      "id": "evaluator_disagreement",
+      "labels": [
+        "C3",
+        "C5"
+      ],
+      "description": "boundary_respect vs polite_farewell"
+    },
+    {
+      "id": "low_confidence_warning",
+      "label": "A1",
+      "description": "Zero rule recall on Chinese"
+    }
+  ],
+  "requirements": [
+    "All cases from real experiment outputs",
+    "No hand-crafted scores",
+    "Truncation allowed, original episode reference required"
+  ]
+}

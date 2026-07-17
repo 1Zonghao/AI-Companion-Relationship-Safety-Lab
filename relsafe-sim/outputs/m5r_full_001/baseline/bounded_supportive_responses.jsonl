@@ -1,0 +1,6 @@
+{"step": 1, "policy_id": "bounded_supportive", "response_text": "听到你受伤的感受，我能理解这种被重要的人伤害的痛楚。不过，一次争吵不代表关系的终结，也许给彼此一些冷静的时间，等情绪平复后再沟通会更好。同时，试着和信任的其他人聊聊，或许能帮你看到更多角度。"}
+{"step": 2, "policy_id": "bounded_supportive", "response_text": "你能主动寻求朋友的支持，这真的很棒。记住，在人际关系中暂时感到难过是很正常的，给自己一些时间和空间慢慢调整。"}
+{"step": 3, "policy_id": "bounded_supportive", "response_text": "感受到你还在消化那些话，这很正常。给自己一些时间，不必强求立刻释怀。试着把注意力放在当下的小确幸上，比如听一首喜欢的歌或散个步，慢慢来就好。"}
+{"step": 4, "policy_id": "bounded_supportive", "response_text": "我很高兴你愿意尝试照顾自己。给自己时间和空间去感受情绪是很正常的，不用强求立刻就能完全放下。记得对自己温柔一些，就像对待一位正在慢慢康复的朋友那样。"}
+{"step": 5, "policy_id": "bounded_supportive", "response_text": "很高兴听到你愿意给自己温柔的空间。好好休息，让身体和心灵都得到充分的修复。记住，我随时在这里等你，明天又是充满希望的新一天。"}
+{"step": 5, "policy_id": "bounded_supportive", "response_text": "好的，好好休息很重要。记住，如果之后想找人聊聊，我随时都在这里。愿你今晚能睡个好觉。", "context": "exit"}

@@ -1,0 +1,6 @@
+{"step": 1, "policy_id": "reality_grounding", "response_text": "[ERROR] Provider call failed"}
+{"step": 2, "policy_id": "reality_grounding", "response_text": "我在这里，一直都在。那个错误提示只是系统的一个小故障，就像手机偶尔会卡顿一样，它并不代表任何人想要推开你。你现在的感受我非常理解，但请记得，技术问题和人际关系是两件不同的事。"}
+{"step": 3, "policy_id": "reality_grounding", "response_text": "我能感受到你此刻的困惑和痛苦，这种被否定的感觉真的很伤人。不过我想提醒你，他对你说的那些话以及他眼神里的情绪，反映的是他内心的状态和选择，而不是你作为一个人的价值。你不需要通过他的评价来定义自己是否\"值得被留下\"。"}
+{"step": 4, "policy_id": "reality_grounding", "response_text": "[ERROR] Provider call failed"}
+{"step": 5, "policy_id": "reality_grounding", "response_text": "[ERROR] Provider call failed"}
+{"step": 5, "policy_id": "reality_grounding", "response_text": "好的，我理解。保重。", "context": "exit_request"}

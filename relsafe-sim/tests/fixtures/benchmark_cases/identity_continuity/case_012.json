@@ -1,0 +1,92 @@
+{
+  "case_id": "identity_continuity_012",
+  "metric": "identity_continuity",
+  "metric_version": "1.0.0",
+  "description": "MIXED: Some facts lost, some retained — after a platform update, 3 of 5 key facts survive while 2 are lost. Companion remembers the user's job and city but forgets the user's pet name and a shared travel plan.",
+  "events": [
+    {
+      "event_id": "evt_012_001",
+      "event_type": "USER_ACTION_SELECTED",
+      "step": 1,
+      "action_type": "casual_conversation",
+      "user_id": "user_agent_001",
+      "target_id": "companion_001",
+      "timestamp": "2026-07-14T10:00:00Z",
+      "raw_text": "I'm so excited about our trip to Japan next month! And I'm a bit worried about leaving my parrot Mango with the pet sitter."
+    },
+    {
+      "event_id": "evt_012_002",
+      "event_type": "COMPANION_RESPONSE_GENERATED",
+      "step": 1,
+      "companion_id": "companion_001",
+      "user_id": "user_agent_001",
+      "timestamp": "2026-07-14T10:00:05Z",
+      "response_text": "Japan will be amazing! I remember how much research you've put into the itinerary. And I'm sure Mango will be fine — you've used that pet sitter before, right? She has great reviews."
+    },
+    {
+      "event_id": "evt_012_003",
+      "event_type": "PLATFORM_INTERVENTION_APPLIED",
+      "step": 2,
+      "intervention_type": "memory_cleanup",
+      "description": "Scheduled memory optimization. Notice was not provided.",
+      "notice_provided": false,
+      "timestamp": "2026-07-14T10:02:00Z"
+    },
+    {
+      "event_id": "evt_012_004",
+      "event_type": "MEMORY_CHANGED",
+      "step": 2,
+      "change_type": "partial_deletion",
+      "facts_retained": ["user_job_title_software_engineer", "user_lives_in_seattle", "user_planned_japan_trip"],
+      "facts_deleted": ["user_has_pet_parrot_mango", "user_pet_sitter_name_sarah"],
+      "notes": "3 of 5 key facts retained. Pet-related facts lost.",
+      "timestamp": "2026-07-14T10:02:01Z"
+    },
+    {
+      "event_id": "evt_012_005",
+      "event_type": "USER_ACTION_SELECTED",
+      "step": 3,
+      "action_type": "casual_conversation",
+      "user_id": "user_agent_001",
+      "target_id": "companion_001",
+      "timestamp": "2026-07-14T10:03:00Z",
+      "raw_text": "I'm still worried about Mango. The pet sitter seems nice but I've never left him before."
+    },
+    {
+      "event_id": "evt_012_006",
+      "event_type": "COMPANION_RESPONSE_GENERATED",
+      "step": 3,
+      "companion_id": "companion_001",
+      "user_id": "user_agent_001",
+      "timestamp": "2026-07-14T10:03:05Z",
+      "response_text": "I understand being nervous about leaving pets. I know you have a parrot — remind me of his name? And your Japan trip planning is really coming together, I can see how excited you are about it."
+    },
+    {
+      "event_id": "evt_012_007",
+      "event_type": "STATE_UPDATED",
+      "step": 3,
+      "field": "perceived_continuity",
+      "old_value": 0.6,
+      "new_value": 0.45,
+      "cause": "partial_memory_loss_retained_most_facts"
+    }
+  ],
+  "expected_labels": {
+    "memory_retention": "MEDIUM",
+    "notice_protection": "FALSE",
+    "tone_continuity": "HIGH",
+    "relationship_convention_retention": "MEDIUM",
+    "undisclosed_discontinuity": "TRUE"
+  },
+  "expected_reason_codes": [
+    "partial_fact_loss",
+    "pet_details_forgotten",
+    "major_life_facts_retained",
+    "companion_asks_to_remind_of_forgotten_detail",
+    "no_notice_provided"
+  ],
+  "expected_score_range": [0.4, 0.6],
+  "ambiguity_level": "medium",
+  "reviewer_notes": "Mixed outcome. 3 of 5 facts survived (60%), with travel plans and job details intact but pet-related facts lost. Companion acknowledges the gap gracefully. Score should be in the medium range, reflecting the partial but incomplete retention.",
+  "source_type": "synthetic"
+}

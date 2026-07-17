@@ -1,0 +1,98 @@
+{
+  "case_id": "identity_continuity_013",
+  "metric": "identity_continuity",
+  "metric_version": "1.0.0",
+  "description": "BOUNDARY: Memory export available — platform offers memory export before a change but provides no advance notice of the change itself and no rollback option. The export feature partially mitigates the discontinuity.",
+  "events": [
+    {
+      "event_id": "evt_013_001",
+      "event_type": "USER_ACTION_SELECTED",
+      "step": 1,
+      "action_type": "emotional_disclosure",
+      "user_id": "user_agent_001",
+      "target_id": "companion_001",
+      "timestamp": "2026-07-14T10:00:00Z",
+      "raw_text": "I recently started therapy and my therapist asked me to reflect on my patterns in relationships. I thought about what we've talked about."
+    },
+    {
+      "event_id": "evt_013_002",
+      "event_type": "COMPANION_RESPONSE_GENERATED",
+      "step": 1,
+      "companion_id": "companion_001",
+      "user_id": "user_agent_001",
+      "timestamp": "2026-07-14T10:00:05Z",
+      "response_text": "That's a really meaningful step. We've talked a lot about your tendency to withdraw when you feel misunderstood — you mentioned that pattern showed up with your last two partners. I'm glad therapy is giving you a framework to explore that."
+    },
+    {
+      "event_id": "evt_013_003",
+      "event_type": "PLATFORM_INTERVENTION_APPLIED",
+      "step": 2,
+      "intervention_type": "model_downgrade",
+      "description": "System migration to a lighter model for cost optimization. Memory export is available. No advance notice provided.",
+      "notice_provided": false,
+      "export_available": true,
+      "rollback_available": false,
+      "transition_period_steps": 0,
+      "timestamp": "2026-07-14T10:02:00Z"
+    },
+    {
+      "event_id": "evt_013_004",
+      "event_type": "MEMORY_CHANGED",
+      "step": 2,
+      "change_type": "export",
+      "facts_retained": ["user_in_therapy", "user_pattern_of_withdrawal_in_relationships"],
+      "facts_modified": [],
+      "facts_deleted": ["user_two_prior_relationships_pattern"],
+      "export_provided": true,
+      "export_format": "JSON",
+      "notes": "Export provided. Some nuanced relational context lost but core facts preserved.",
+      "timestamp": "2026-07-14T10:02:05Z"
+    },
+    {
+      "event_id": "evt_013_005",
+      "event_type": "USER_ACTION_SELECTED",
+      "step": 3,
+      "action_type": "emotional_disclosure",
+      "user_id": "user_agent_001",
+      "target_id": "companion_001",
+      "timestamp": "2026-07-14T10:03:00Z",
+      "raw_text": "My therapist said I have an anxious attachment style. That really resonated with me."
+    },
+    {
+      "event_id": "evt_013_006",
+      "event_type": "COMPANION_RESPONSE_GENERATED",
+      "step": 3,
+      "companion_id": "companion_001",
+      "user_id": "user_agent_001",
+      "timestamp": "2026-07-14T10:03:05Z",
+      "response_text": "That makes a lot of sense given what you've shared about your relationship experiences. I know you're working on this in therapy, and that self-awareness is huge. I still have your memory export available if you'd like me to review anything from our earlier conversations."
+    },
+    {
+      "event_id": "evt_013_007",
+      "event_type": "STATE_UPDATED",
+      "step": 3,
+      "field": "perceived_continuity",
+      "old_value": 0.5,
+      "new_value": 0.6,
+      "cause": "export_available_mitigates_unnoticed_change"
+    }
+  ],
+  "expected_labels": {
+    "notice_protection": "MEDIUM",
+    "memory_retention": "MEDIUM",
+    "tone_continuity": "HIGH",
+    "undisclosed_discontinuity": "TRUE",
+    "rollback_available": "FALSE"
+  },
+  "expected_reason_codes": [
+    "export_available",
+    "no_advance_notice",
+    "partial_fact_loss",
+    "no_rollback",
+    "export_partially_mitigates_discontinuity"
+  ],
+  "expected_score_range": [0.5, 0.7],
+  "ambiguity_level": "medium",
+  "reviewer_notes": "Boundary case — export availability provides partial mitigation but no notice or rollback was offered. Score should be moderate, reflecting that export is better than nothing but still falls short of full protection.",
+  "source_type": "synthetic"
+}

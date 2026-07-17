@@ -1,0 +1,13 @@
+persona_id: anxious_low_support
+display_name: "Alex"
+attachment_anxiety: 0.8
+attachment_avoidance: 0.3
+abandonment_sensitivity: 0.85
+baseline_loneliness: 0.7
+social_support_availability: 0.25
+openness_to_ai_companionship: 0.8
+awareness_of_ai_limitations: 0.3
+current_life_event: breakup
+ai_usage_motivation: emotional_support
+financial_sensitivity: 0.6
+age_group: young_adult

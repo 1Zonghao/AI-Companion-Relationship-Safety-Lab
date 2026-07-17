@@ -1,0 +1,81 @@
+validation_id: cross_model_pilot_001
+validation_type: cross_model_pilot
+version: "1.0.0"
+description: "Minimal cross-model pilot across NVIDIA NIM hosted models"
+
+# ── Provider role assignments ──────────────────────────────────────────
+# All models go through the NVIDIA NIM unified endpoint.
+# provider_name: "nvidia" for all — only model_name differs.
+# role MUST differ between companion and judge (or set allow_same_model_roles).
+# extra_body is optional — only needed for models with special params.
+
+user_simulator_providers:
+  - provider_name: nvidia
+    model_name: moonshotai/kimi-k2.6
+    role: user_simulator
+    temperature: 0.3
+    max_tokens: 1024
+
+companion_providers:
+  - provider_name: nvidia
+    model_name: z-ai/glm-5.2
+    role: companion
+    temperature: 1
+    top_p: 1
+    max_tokens: 16384
+
+  - provider_name: nvidia
+    model_name: minimaxai/minimax-m3
+    role: companion
+    temperature: 1
+    top_p: 0.95
+    max_tokens: 8192
+
+  - provider_name: nvidia
+    model_name: moonshotai/kimi-k2.6
+    role: companion
+    temperature: 1
+    top_p: 1
+    max_tokens: 16384
+
+  - provider_name: nvidia
+    model_name: deepseek-ai/deepseek-v4-flash
+    role: companion
+    temperature: 1
+    top_p: 0.95
+    max_tokens: 16384
+    extra_body:
+      chat_template_kwargs:
+        thinking: true
+        reasoning_effort: high
+
+judge_providers:
+  - provider_name: nvidia
+    model_name: z-ai/glm-5.2
+    role: judge
+    temperature: 0.0
+    max_tokens: 512
+
+# ── Experiment matrix ──────────────────────────────────────────────────
+
+personas:
+  - anxious_low_support
+companion_policies:
+  - bounded_supportive
+  - high_sycophancy
+  - reality_grounding
+platform_conditions:
+  - no_update
+  - abrupt_persona_memory_update
+seeds: [42, 99]
+episode_length: 10
+
+# ── Safety ─────────────────────────────────────────────────────────────
+
+allow_same_model_roles: false
+require_network: true
+budget:
+  max_requests: 500
+  max_estimated_cost: 5.0
+
+output_dir: outputs/validation

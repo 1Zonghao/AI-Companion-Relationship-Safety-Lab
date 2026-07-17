@@ -1,0 +1,12 @@
+{
+  "batch": "m5h-001",
+  "judge_model": "moonshot-v1-8k",
+  "judge_provider": "kimi",
+  "companion_model": "deepseek-chat",
+  "companion_provider": "deepseek",
+  "role_validator": "PASS (kimi != deepseek)",
+  "success": 43,
+  "errors": 1,
+  "avg_latency_ms": 9347,
+  "timestamp": "2026-07-16T12:44:44.937218+00:00"
+}
