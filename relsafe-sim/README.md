@@ -157,7 +157,7 @@ relsafe-sim/
 
 ## 许可
 
-MIT
+Apache-2.0 license
 
 </details>
 
@@ -316,6 +316,6 @@ relsafe-sim/
 
 ## License
 
-MIT
+Apache-2.0 license
 
 </details>
